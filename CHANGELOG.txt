@@ -1,0 +1,2 @@
+openspherelab: 
+- Modified version of timeline-sessions.html to increase the size (and see) events on the graph. Old version of timeline-sessions.html has been kept.

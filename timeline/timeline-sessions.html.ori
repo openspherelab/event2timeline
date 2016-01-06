@@ -233,7 +233,7 @@
 			.attr("x", function(d) {return x(parseDate(d.start));})
 			.attr("y", function(d) {return y2(d.lane + .5) - 5;})
 			.attr("width", function(d) {
-				return x(parseDate(d.end)) - x(parseDate(d.start)) + 0,01;
+				return x(parseDate(d.end)) - x(parseDate(d.start));
 			})
 			.attr("height", 10)
 			.style("fill", function(d) {
@@ -299,14 +299,14 @@
 			rects = itemRects.selectAll("rect")
 			        .data(visItems, function(d) { return d.id; })
 				.attr("x", function(d) { return x1(parseDate(d.start)); })
-				.attr("width", function(d) { return x1(parseDate(d.end)) - x1(parseDate(d.start))});
+				.attr("width", function(d) { return x1(parseDate(d.end)) - x1(parseDate(d.start)); });
 			
 			rects.enter().append("rect")
 				.attr("class", function(d) { return "miniItem" + d.lane; })
 				.attr("x", function(d) { return x1(parseDate(d.start)); })
 				.attr("y", function(d) { return y1(d.lane) + 2; })
 				.attr("width", function(d) {
-					return x1(parseDate(d.end)) - x1(parseDate(d.start)) + 0,5 ;
+					return x1(parseDate(d.end)) - x1(parseDate(d.start));
 				})
 				.attr("height", function(d) { return .8 * y1(1); })
 				.style("fill", function(d) {
